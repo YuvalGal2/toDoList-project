@@ -1,0 +1,13 @@
+<form name="newItemForm" (ngSubmit)="onSubmit(newItemForm);" #newItemForm="ngForm"> 
+    <mat-form-field class="full-width">
+        <input matInput placeholder="Task title" ngModel name="title" required >
+      </mat-form-field>
+      <mat-form-field class="full-width">
+          <input matInput placeholder="date" ngModel name="date" type="date" required >
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <textarea matInput ngModel name="comment" placeholder="Describe your task" required></textarea>
+          </mat-form-field>
+          <button mat-button type="submit" [disabled]="!newItemForm.valid" class="mat-raised-button mat-primary spaceing" >Save :) </button>
+          <button mat-button (click)="onClickCancel()" class="mat-raised-button mat-warn spaceing" >Discard me </button>
+  </form>

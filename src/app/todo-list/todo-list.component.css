@@ -1,0 +1,23 @@
+.warpper{
+    margin-top:30px;
+    min-width: 100%;
+}
+.mat-primary{
+    font-weight: 700;
+    font-size: 2rem;
+}
+.control{
+    margin-top:50px;
+}
+.title{
+    font-size:3rem;
+    margin:10px 0px;
+}
+.sub{
+    font-size:2rem;
+    margin:10px 0px;
+}
+.small{
+    font-size:1.5rem;
+    margin:10px 0px;
+}

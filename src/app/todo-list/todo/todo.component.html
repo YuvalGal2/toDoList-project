@@ -1,0 +1,29 @@
+<div class="warpper">
+    <mat-accordion class="example-headers-align">
+
+        <mat-expansion-panel [expanded]="false" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{todo.date}}
+            </mat-panel-title>
+            <mat-panel-description>
+             {{todo.title}}
+    
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <mat-card-content>
+            <p>{{todo.content}}</p>
+          </mat-card-content>
+         
+          <mat-action-row>
+              <mat-checkbox class="btn-spaceing"  (change)="onChangeChecked($event)" [checked]="setDefaultCheckValue()">Checked</mat-checkbox>
+              <button mat-button class="mat-raised-button mat-warn btn-spaceing"  (click)="onDeleteClicked();">Delete</button>
+              
+          </mat-action-row>
+        </mat-expansion-panel>
+      
+      </mat-accordion>
+      </div>
+      
+    

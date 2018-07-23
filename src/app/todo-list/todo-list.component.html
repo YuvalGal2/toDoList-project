@@ -1,0 +1,31 @@
+<div class="row control" *ngIf="!service.showCreateTask" >
+  <div class="col-xs-12 col-sm-12 col-md-12 ">
+      <button color="primary" mat-fab="" (click)="onClickCreate();" class="mat-fab mat-primary float-right"> + </button>
+  </div>
+</div>
+
+
+<div class="row justify-content-center" *ngIf="service.showCreateTask">
+  <div class="col-xs-12 col-sm-10 col-md-10">
+    <div class="warpper">
+        <app-create-to-do></app-create-to-do>
+    </div>
+  </div>
+</div>
+
+
+<div class="warpper" *ngIf="!service.showCreateTask">
+    <div class="row justify-content-center" *ngFor="let todoItem of toDoList" >
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <app-todo (updateOnDelete)="updateListOnDelete($event)" [todo]="todoItem"></app-todo>
+        </div>
+      </div>
+    
+      <div class="row" *ngIf="toDoList.length === 0 ">
+      <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+          <p class="sub title">Let me help you remember your tasks.</p> 
+          <p class="small title">Click the button and start.</p> 
+      </div>
+      </div>
+</div>
+
